@@ -1,25 +1,23 @@
 <template>
-    <md-card>
+<div>
+ <md-card v-for="persona in personas" :key="persona.id">
       <md-card-header>
-
-        <md-avatar class="md-avatar-icon md-primary">A</md-avatar> 
-
+        <md-avatar class="md-avatar-icon md-primary">{{persona.nombre.toUpperCase().charAt(0)}}</md-avatar>
         <md-card-header-text>
-          <div class="md-title">Media card</div>
-          <div class="md-subhead">Normal size</div>
-        </md-card-header-text>
-
-        
+          <div class="md-title">{{persona.nombre+" "+persona.apellido}}</div>
+          <div class="md-subhead">{{persona.cedula}}</div>
+        </md-card-header-text> 
       </md-card-header>
 
       <md-card-actions>
-        <md-button>Ver</md-button>
-        <md-button>Editar</md-button>
+        <md-button @click="activar_ventana_ver(persona)">Ver</md-button>
+        <md-button >Editar</md-button>
         <md-button>Eliminar</md-button>
       </md-card-actions>
     </md-card>
+    <ver-persona></ver-persona>
+    </div>
 </template>
-
 
 <style lang="scss" scoped>
   .md-card {
@@ -32,6 +30,19 @@
 
 <script>
 export default {
-  name: 'Media'
+  name: 'Media',
+  data(){
+    return{
+        personas:[]
+    }
+  },mounted(){
+    EventBus.$on('buscar-personas',data=>{
+      this.personas = data;
+    })
+  }, methods:{
+    activar_ventana_ver(data){
+      EventBus.$emit('activar-ventana-ver',data)
+    }
+  }
 }
 </script>

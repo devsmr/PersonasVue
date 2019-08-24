@@ -7,6 +7,7 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
 import 'vue-material/dist/theme/default.css'
@@ -18,7 +19,11 @@ Vue.use(VueFuse)
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('index-persona', require('./components/indexPersona.vue').default);
 Vue.component('card-persona', require('./components/CardPersona.vue').default);
+Vue.component('agregar-persona', require('./components/AgregarPersonas.vue').default);
+Vue.component('empty-persona', require('./components/EmptyPersona.vue').default);
 
+//habilita el objeto entre los componentes que se van a comunicar
+window.EventBus = new Vue();
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

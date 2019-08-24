@@ -1801,15 +1801,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Reveal',
   data: function data() {
@@ -6278,7 +6269,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".md-app[data-v-10531d76] {\n  max-height: 400px;\n  border: 1px solid rgba(0, 0, 0, 0.12);\n}\n.md-drawer[data-v-10531d76] {\n  width: 230px;\n  max-width: calc(100vw - 125px);\n}", ""]);
+exports.push([module.i, ".md-app[data-v-10531d76] {\n  height: 100%;\n  border: 1px solid rgba(0, 0, 0, 0.12);\n}\n.md-drawer[data-v-10531d76] {\n  width: 230px;\n  max-width: calc(100vw - 125px);\n}", ""]);
 
 // exports
 
@@ -37947,30 +37938,6 @@ var render = function() {
                       _vm._v(" "),
                       _c("span", { staticClass: "md-list-item-text" }, [
                         _vm._v("Cerrar Sesion")
-                      ])
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "md-list-item",
-                    [
-                      _c("md-icon", [_vm._v("delete")]),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "md-list-item-text" }, [
-                        _vm._v("Trash")
-                      ])
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "md-list-item",
-                    [
-                      _c("md-icon", [_vm._v("error")]),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "md-list-item-text" }, [
-                        _vm._v("Spam")
                       ])
                     ],
                     1

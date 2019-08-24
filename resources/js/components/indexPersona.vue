@@ -31,16 +31,7 @@
             <md-icon>power_settings_new</md-icon>
             <span class="md-list-item-text">Cerrar Sesion</span>
           </md-list-item>
-
-          <md-list-item>
-            <md-icon>delete</md-icon>
-            <span class="md-list-item-text">Trash</span>
-          </md-list-item>
-
-          <md-list-item>
-            <md-icon>error</md-icon>
-            <span class="md-list-item-text">Spam</span>
-          </md-list-item>
+         
         </md-list>
       </md-app-drawer>
 
@@ -67,7 +58,7 @@
 
 <style lang="scss" scoped>
   .md-app {
-    max-height: 400px;
+    height: 100%;
     border: 1px solid rgba(#000, .12);
   }
 
